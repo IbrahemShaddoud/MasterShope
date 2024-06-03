@@ -5,7 +5,6 @@ import '../compount/mydrwer.dart';
 import '../compount/productview.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import '../compount/search.dart';
 
 class Laptops extends StatefulWidget {
   @override
@@ -29,32 +28,23 @@ class _LaptopsState extends State<Laptops> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            iconTheme: IconThemeData(color: Colors.black, size: 27, opacity: 7),
-            titleTextStyle: TextStyle(
-                color: Colors.black,
-                fontSize: 26,
-                fontStyle: FontStyle.italic,
-                shadows: const <Shadow>[
-                  Shadow(
-                    color: Colors.black,
-                  )
-                ]),
-            title: Text(
-              "Laptops",
-              style: TextStyle(fontFamily: "Bold Italic Art"),
-            ),
-            titleSpacing: 20,
-            backgroundColor: Color.fromARGB(204, 233, 30, 98),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.search),
-                onPressed: () {
-                  showSearch(
-                      context: context, delegate: Search(listt: listsearch));
-                },
-                splashRadius: 2,
-              )
-            ]),
+          iconTheme: IconThemeData(color: Colors.black, size: 27, opacity: 7),
+          titleTextStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 26,
+              fontStyle: FontStyle.italic,
+              shadows: const <Shadow>[
+                Shadow(
+                  color: Colors.black,
+                )
+              ]),
+          title: Text(
+            "Laptops",
+            style: TextStyle(fontFamily: "Bold Italic Art"),
+          ),
+          titleSpacing: 20,
+          backgroundColor: Color.fromARGB(204, 233, 30, 98),
+        ),
         drawer: MyDrawer(),
         body: Container(
             color: Color.fromARGB(127, 255, 157, 190),
